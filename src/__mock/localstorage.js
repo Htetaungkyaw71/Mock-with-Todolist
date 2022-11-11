@@ -5,7 +5,7 @@ beforeAll(() => {
   global.Storage.prototype.setItem = jest.fn((key, value) => {
     localStorage[key] = value;
   });
-  global.Storage.prototype.setItem = jest.fn((key) => localStorage[key]);
+  global.Storage.prototype.getItem = jest.fn((key) => localStorage[key]);
 });
 
 beforeEach(() => {
